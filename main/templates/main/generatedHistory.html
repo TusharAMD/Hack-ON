@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories</title>
+	
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+            height: 100%;
+
+  
+            /* background: none; */
+            background: rgb(0, 0, 0, 0.7) url('/static/img/background.jpg') no-repeat;
+            background-size: cover;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            max-width: 50%;
+            margin: auto;
+            height: 75%;
+            background: none;
+        }
+
+        .box {
+
+			width: 100%;
+			height: 100%;
+            display: inline-block;
+            position: relative;
+            background: none;
+            background-color: rgba(0, 0, 0, 0);
+            top: 0px;
+            left: 0px;
+            border: 2px solid green;
+            padding: 20px 30px;
+            border-radius: 40px;
+            background-color: rgba(255, 166, 0, 0.856);
+            box-sizing: border-box;
+        }
+
+        .heading {
+            display: inline-block;
+            position: relative;
+            top: -287px;
+            left: 277px;
+        }
+    </style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+
+<body>
+     <section id="main">
+       {% for ele in generated_Hist %}
+	<div class="card-transparent" style="width: 100%;">
+  <div class="card-block special-card" style="background-color: rgba(245, 245, 245, 0.4); ">
+    <h5 class="card-title">Story</h5>
+    <p class="card-text">{{ele.generated_text}}</p>
+  </div>
+</div>
+ {% endfor %} 
+
+    </section>
+	
+</body>
+
+</html>
